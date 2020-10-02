@@ -1,0 +1,34 @@
+﻿@model IEnumerable<OneSignalApp.Models.App>
+@{
+
+    var isadmin = ViewBag.displayMenu;
+}
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table" id="tblapp">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @if (isadmin == "admin")
+            {
+          <a onclick="Edit()">Update</a> 
+            }
+
+
+
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<a  onclick="location.href='@Url.Action("CreateApp", "Apps")'">View Apps</a>
+
+<input type="text" id="name">
+<input type="button" value="save" onclick="Save()"> 
+<input type="hidden" id="id_"> 
+
+<div id="divloadapp">
+    </div>
